@@ -3,84 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Tugas RevoU</title>
+    <title>Kalkulator Persegi RevoU</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    
 
 </head>
 <body>
     <header>
         <h1>
-            <span>KATIK </span> Kalkulator Matematik
+            <div class="header">
+                  <p>Kalkulator Persegi</p>
+            </div>
+            
         </h1> 
     </header>
     <main>
-                <h2>Welcome to KATIK</h2>
-                <p>"Hai Sobat, Selamat datang di KATIK! :)"
-                <br>Sebuah web apps sederhana yang menghitung luas bangun datar
-                <br>
-                <br>Pilih perhitungan mana yang ingin Anda lakukan</p>
+                <h2>Welcome to Kalkulator Persegi  :]</h2>
+                <p>Hai Sobat, Selamat datang di Kalkulator Persegi!
+                <br>Kalkulator adalah sebuah web apps sederhana untuk menghitung luas dan keliling Persegi
+                <br></p>
+                <img src="https://www.advernesia.com/wp-content/uploads/2018/10/Persegi.png">
+                <p><b>Bangun Persegi</b></p>
             <nav>
-                <a href="#luas" class="button-nav">Hitung Luas</a>
-                <a href="#keliling" class="button-nav">Hitung Keliling</a>
+                <a href="#luasSect" class="button-nav">Hitung Luas</a>
+                <a href="#kelilingSect" class="button-nav">Hitung Keliling</a>
                 <br>
             </nav>
             
                       
-        <section id="luas">  
+        <section id="luasSect" class="hitung">  
             <br>
             <div class="title-color">
                 Luas Persegi
             </div>
             <br>
-            <img src="persegi.png">
-            <p><b>Bujur Sangkar</b></p>
-            
+          
             <div class="description">
-                <p>Rumus Luas Persegi adalah :</p>
+                <p>Rumus luas persegi adalah :</p>
             </div>
             <div><b>L = S x S</b></div>
             <div class="description">
-                <p>Di mana:</p>
                 <p>L = Luas</p>
                 <p>S = Sisi</p>
             </div>
             <div class="title">
                 Hitung Luas Persegi
             </div>
-            <input type="number" name="number" id="number" />
-            <div class="button-act">
-                <button type="submit" class="button-submit">Hitung</button>
-                <button type="reset" class="button-reset">Reset</button>
-              </div>
-        </section>
-       
-        
-        <section id="keliling">
+            
+              <form action="">
+                <section class="inputLuas">
+                    <label for="inputFieldL">Sisi = </label>
+                    <input type="number" name= "inputFieldL" id="inputFieldL" min="0"> meter
+                </section>
+                <section class="inputButton">
+                    <button type="button" onclick="hitung()" value="Hitung" class="button-submit">Hitung</button>
+                    <button type="reset" class="button-reset">Reset</button>
+                </section>
+                <section class="HitungLuas">
+                    <p>Luas persegi adalah <text id="Luas" name="Luas" type="number"></text> meter<sup>2</sup>.</p>
+                </section>
+                </form>
+       </section>
+
+        <section id="kelilingSect" class="hitung">
             <div class="title-color">
                 Keliling Persegi
             </div>
-            <img src="persegi.png">
-            <p><b>Bujur Sangkar</b></p>
-            
+                       
             <div class="description">
-                <p>Rumus Keliling Persegi adalah :</p>
+                <p>Rumus keliling persegi adalah :</p>
             </div>
             <div><b>K = 4 x S</b></div>
             <div class="description">
-                <p>Di mana:</p>
                 <p>K = Keliling</p>
                 <p>S = Sisi</p>
             </div>
             <div class="title">
-                Hitung Luas Persegi
+                Hitung Keliling Persegi
             </div>
-            <input type="number" name="number" id="number" />
-            <div class="button-act">
-                <button type="submit" class="button-submit">Hitung</button>
-                <button type="reset" class="button-reset">Reset</button>
-              </div>
+                <form action="">
+                <section class="inputLuas">
+                    <label for="inputFieldK">Sisi = </label>
+                    <input type="number" name= "inputFieldK" id="inputFieldK" min="0"> meter
+                </section>
+                <section class="inputButton">
+                    <button type="button" onclick="hitung()" value="Hitung" class="button-submit">Hitung</button>
+                    <button type="reset" class="button-reset">Reset</button>
+                </section>
+                <section class="HitungKeliling">
+                    <p>Keliling persegi adalah <text id="Keliling" name="Keliling" type="number"></text> meter.</p>
+                </section>
+                </form>
         </section>
     </main>
-   
+    <script src="js/script.js"></script>
 </body>
 </html>
